@@ -1,0 +1,14 @@
+<h5>Courses list</h5>
+<br>
+<p>Page: {{ page }}</p>
+<br>
+<div class="collection">
+    <a class="collection-item" 
+    *ngFor="let course of courses"
+    [routerLink]="[course.id]"
+    routerLinkActive="active">
+    {{ course.name }}</a>
+</div>
+<br>
+<button (click)="nextPage()">Next</button>
+
